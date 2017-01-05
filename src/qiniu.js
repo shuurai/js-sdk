@@ -611,6 +611,7 @@ function QiniuJsSDK() {
 
         var getUpHosts = function(uptoken) {
             var putPolicy = getPutPolicy(uptoken);
+            console.log('qiniu: get up hosts',uptoken, putPolicy.scope);
             // var uphosts_url = "//uc.qbox.me/v1/query?ak="+ak+"&bucket="+putPolicy.scope;
             // IE 9- is not support protocal relative url
             var uphosts_url = window.location.protocol + "//uc.qbox.me/v1/query?ak=" + putPolicy.ak + "&bucket=" + putPolicy.bucket;
